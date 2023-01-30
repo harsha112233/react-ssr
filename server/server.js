@@ -1,7 +1,8 @@
 import React from "react";
 import express from "express";
 import { renderToString } from "react-dom/server";
-import App  from "../src/App";
+import App from "../src/App";
+// const App = require("../src/App");
 const ReactDOMServer = require("react-dom/server");
 const fs = require("fs");
 const cors = require("cors");
@@ -10,7 +11,7 @@ const { StaticRouter } = require("react-router-dom");
 
 const app = express();
 
-app.use(express.static("public"));
+
 app.use(cors());
 app.get(
   /\.(js|css|map|ico|png)$/,
