@@ -1,15 +1,20 @@
 import React from 'react';
-import {render} from 'react-dom';
+
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import './index.css';
+import { hydrate } from 'react-dom';
+
 import reportWebVitals from './reportWebVitals';
+import { HashRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.hydrate(
-  <React.StrictMode>
+root.render(
+  <>
+  <HashRouter>
     <App />
-  </React.StrictMode>
+    </HashRouter>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function
